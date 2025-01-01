@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Port</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="./portfolio.css">
+</head>
+
+<body style="padding-top: 100px; font-family: 'Work Sans', sans-serif;">
+    <div class="header">
+        <div class="brand-div">
+            <h2 class="brand">My Port</h2>
+        </div>
+        <div class="navigations">
+            <ul class="nav">
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </div>     
+    </div>
+    
+    <div class="side-links">
+        <ul class="social-media">
+            <li class="logos-item"><a href="https://github.com/LikhithReddy-S" target="_blank"><img class="logos" src="https://www.svgrepo.com/show/512317/github-142.svg" alt="Github Logo"></a></li>
+            <li class="logos-item"><a href="https://www.linkedin.com/in/likhithreddys/" target="_blank"><img class="logos" src="https://www.svgrepo.com/show/510045/linkedin.svg" alt="linkedin logo"></a></li>
+            <li class="logos-item"><a href="https://x.com/LikhithRed13161" target="_blank"><img class="logos" src="https://www.svgrepo.com/show/510291/twitter.svg" alt="twitter logo"></a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <div class="Main">
+            <div class="mypic"><img src="./profile-pic.jpg" width="450px" style="border-radius: 250px;" alt="My Pic"></div>
+            <div class="mytext">
+                <p class="hello">Hello</p>
+                <p class="bitAboutMe">A Bit About Me</p>
+                <p style="margin-top: 5px; margin-bottom:0; font-size: 20px;">
+                    Welcome to My Port,<hr>I am Likhith Reddy. As a student, I am ardently<br>
+                    pursuing my aspirations in the field of computer science.<br>
+                    Additionally, I have a decent knack for computers<br>
+                    and games.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p id="resume" style="font-size: large;">Resume</p>
+    
+    <div class="resume">
+
+
+        <div class="term">
+            <div class="termName">
+                <p class="termNamepara">Work<br>Experience</p>
+            </div>
+            <div class="term-content">
+                <div class="time-line">
+                    <p>2024 - present</p>
+                </div>
+                <div>
+                    <div class="term-heading">
+                        <p class="term-heading-para toggle-heading" onclick="toggleContent('work-details')">
+                            No Work Experience
+                        </p>
+                    </div>
+                    <div id="work-details" class="about-term hidden">
+                        <pre>
+Currently pursuing my BTECH Degree in AMRITA
+UNIVERSITY
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <hr>
+
+
+        <div class="term">
+            <div class="termName">
+                <p class="termNamepara">Education</p>
+            </div>
+            <div>
+                <div class="term-content">
+                    <div class="time-line">
+                        <p>2023 - 2028</p>
+                    </div>
+                    <div>
+                        <div class="term-heading">
+                            <p class="term-heading-para toggle-heading" onclick="toggleContent('amrita-details')">
+                                AMRITA UNIVERSITY |<br> Bachelor's Degree
+                            </p>
+                        </div>
+                        <div id="amrita-details" class="about-term hidden">
+                            <pre>
+I am working towards my aspirations in the
+field of cybersecurity.Alongside my studies, I
+have developed a decent knack for computers
+and games, which complements my technical education.
+                            </pre>
+                        </div>
+                    </div>
+                </div>              
+                <div class="term-content">
+                    <div class="time-line">
+                        <p>2016 - 2023</p>
+                    </div>
+                    <div>
+                        <div class="term-heading">
+                            <p class="term-heading-para toggle-heading" onclick="toggleContent('narayana-details')">
+                                NARAYANA School of<br>Education
+                            </p>
+                        </div>
+                        <div id="narayana-details" class="about-term hidden">
+                            <pre>
+Narayana Schools provided me with an
+invaluable experience, culminating in my
+achieving a score of 97.49% in the JEE Mains
+examination.
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <hr>
+
+
+
+        <div class="term">
+            <div class="termName">
+                <p class="termNamepara">Skills<br>& Expertise</p>
+            </div>
+            <div class="term-content">
+                <div class="time-line"></div>
+                <div>
+                    <ul style="padding-left: 0; list-style: none;">
+                        <li>
+                            <p class="toggle-heading" onclick="toggleContent('networking')">Networking</p>
+                            <div id="networking" class="about-term hidden">
+                                <pre>
+In the realm of networking, I exhibit
+considerable prowess.</pre>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="toggle-heading" onclick="toggleContent('linux')">Operating System</p>
+                            <div id="linux" class="about-term hidden">
+                                <pre>My expertise extends to the Linux operating 
+system, where I navigate with ease.</pre>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="toggle-heading" onclick="toggleContent('programming')">Programming</p>
+                            <div id="programming" class="about-term hidden">
+                                <pre>Python programming is another domain where I
+demonstrate proficiency.</pre>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="toggle-heading" onclick="toggleContent('leadership')">Leadership Skills</p>
+                            <div id="leadership" class="about-term hidden">
+                                <pre>
+I showcase strong leadership skills, particularly
+in navigating critical scenarios while leading
+teams in PUBG.</pre>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <p id="projects"style="font-size: large;">projects</p>
+
+    <div class="projects">
+        
+        
+        <div class="project">
+            <div>
+                <div class="project-content">
+                    <div>
+                        <div class="term-heading">
+                            <p class="term-heading-para toggle-heading" onclick="toggleContent('attendance-tracker-details')">
+                                Attendance Tracker
+                            </p>
+                        </div>
+                        <div id="attendance-tracker-details" class="about-term hidden">
+                            <pre>
+This is the project where a student can
+just enter their Attendance percentage
+to get to know how many they need to 
+attend in further.
+This is undergoing project - Currently
+i am working on this backend
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projectName">
+                <p class="project-name-para">Go to website</p> <a href="https://likhithreddy-s.github.io/attendance-tracker/" target="_blank"><img src="https://img.icons8.com/?size=100&id=92&format=png" alt="" height="30px"></a> 
+            </div>
+        </div>
+        <p style="text-align: center;margin-bottom: 0"><a href="mailto:slikhithreddy22@gmail.com" style="text-decoration: none; color: black;">Contact me</a></p>
+        <p style="text-align: center; margin-top: 0;">Made my Likhith💕</p>
+    </div>
+    <script>
+        function toggleContent(id) {
+            const element = document.getElementById(id);
+            if (element.classList.contains('hidden')) {
+                element.classList.remove('hidden');
+            } else {
+                element.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
