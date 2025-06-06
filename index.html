@@ -6,6 +6,411 @@
     <title>My Port</title>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="./portfolio.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Experience Section */
+        .experience-section {
+            background-color: white;
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .job-section {
+            display: flex;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .job-header {
+            width: 30%;
+            flex-shrink: 0;
+            padding-right: 40px;
+            position: relative;
+        }
+        
+        .job-header::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: #333;
+        }
+        
+        .job-title {
+            font-size: 24px;
+            font-weight: normal;
+            margin: 0 0 8px 0;
+            color: #333;
+        }
+        
+        .company-name {
+            font-size: 18px;
+            font-weight: normal;
+            margin: 0 0 20px 0;
+            color: #666;
+        }
+        
+        .date-range {
+            font-size: 16px;
+            color: #333;
+            margin: 0;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+        
+        .job-details {
+            flex: 1;
+            padding-left: 40px;
+        }
+        
+        .job-details ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .job-details li {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+        
+        .job-details li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        /* Second job section - right aligned */
+        .job-section.right {
+            flex-direction: row-reverse;
+        }
+        
+        .job-section.right .job-header {
+            padding-left: 40px;
+            padding-right: 0;
+            text-align: right;
+        }
+        
+        .job-section.right .job-header::after {
+            left: 0;
+            right: auto;
+        }
+        
+        .job-section.right .job-details {
+            padding-right: 40px;
+            padding-left: 0;
+        }
+        
+        /* Projects Section */
+        .projects-section {
+            background-color: #f0f0f0;
+            padding: 40px 0;
+            color: #333;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 50px;
+            position: relative;
+            color: #333;
+        }
+        
+        /* .section-header::before,
+        .section-header::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 200px;
+            height: 1px;
+            background-color: #333;
+        }
+        
+        .section-header::before {
+            left: -220px;
+        }
+        
+        .section-header::after {
+            right: -220px;
+        }
+         */
+        /* Featured Projects */
+        .featured-projects {
+            margin-bottom: 80px;
+        }
+        
+        .featured-project {
+            display: flex;
+            margin-bottom: 60px;
+            align-items: flex-start;
+            gap: 40px;
+        }
+        
+        .featured-project.reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .project-image {
+            width: 350px;
+            height: 200px;
+            background-color: #aaa;
+            flex-shrink: 0;
+        }
+        
+        .project-content {
+            flex: 1;
+        }
+        
+        .project-title {
+            font-size: 24px;
+            font-weight: normal;
+            margin: 0 0 15px 0;
+            color: #333;
+        }
+        
+        .project-description {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 0 20px 0;
+            color: #666;
+        }
+        
+        .project-divider {
+            width: 100%;
+            height: 1px;
+            background-color: #333;
+            margin: 20px 0;
+        }
+        
+        .project-tech {
+            font-size: 14px;
+            margin: 15px 0;
+            color: #333;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .project-link {
+            width: 20px;
+            height: 20px;
+            background-color: #333;
+            display: inline-block;
+        }
+        
+        /* Other Projects */
+        .other-projects {
+            margin-top: 80px;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .small-project {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .small-project-image {
+            width: 120px;
+            height: 80px;
+            background-color: #aaa;
+            flex-shrink: 0;
+        }
+        
+        .small-project-content {
+            flex: 1;
+        }
+        
+        .small-project-title {
+            font-size: 18px;
+            font-weight: normal;
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        
+        .small-project-description {
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 0 0 15px 0;
+            color: #666;
+        }
+        
+        .small-project-divider {
+            width: 100%;
+            height: 1px;
+            background-color: #333;
+            margin: 10px 0;
+        }
+        
+        .small-project-tech {
+            font-size: 12px;
+            margin: 10px 0;
+            color: #333;
+        }
+        
+        .small-project-links {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        
+        .small-project-link {
+            width: 16px;
+            height: 16px;
+            background-color: #333;
+            display: inline-block;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            
+            .experience-section {
+                padding: 20px;
+            }
+            
+            .projects-section {
+                padding: 20px 0;
+            }
+            
+            .job-section {
+                flex-direction: column;
+                margin-bottom: 40px;
+            }
+            
+            .job-section.right {
+                flex-direction: column;
+            }
+            
+            .job-header {
+                width: 100%;
+                padding-right: 0;
+                padding-left: 0;
+                margin-bottom: 20px;
+                text-align: left;
+            }
+            
+            .job-header::after {
+                display: none;
+            }
+            
+            .job-section.right .job-header {
+                padding-left: 0;
+                padding-right: 0;
+                text-align: left;
+            }
+            
+            .job-section.right .job-header::after {
+                display: none;
+            }
+            
+            .job-details {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            
+            .job-section.right .job-details {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            
+            .date-range {
+                border-top: none;
+                padding-top: 0;
+                margin-top: 10px;
+            }
+            
+            .section-header::before,
+            .section-header::after {
+                width: 100px;
+            }
+            
+            .section-header::before {
+                left: -120px;
+            }
+            
+            .section-header::after {
+                right: -120px;
+            }
+            
+            .featured-project,
+            .featured-project.reverse {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .project-image {
+                width: 100%;
+                height: 200px;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .small-project {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .small-project-image {
+                width: 100%;
+                height: 120px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .section-header {
+                font-size: 24px;
+            }
+            
+            .section-header::before,
+            .section-header::after {
+                width: 60px;
+            }
+            
+            .section-header::before {
+                left: -80px;
+            }
+            
+            .section-header::after {
+                right: -80px;
+            }
+        }
+    </style>
 </head>
 
 <body style="padding-top: 100px; font-family: 'Work Sans', sans-serif;">
@@ -175,6 +580,7 @@ teams in PUBG.</pre>
         
     </div>
 
+
     <p id="projects"style="font-size: large;">projects</p>
 
     <div class="projects">
@@ -236,6 +642,154 @@ expense management.
                 <p class="project-name-para">Go to website</p> <a href="https://expenses-tracker-nine-rust.vercel.app/" target="_blank"><img src="https://img.icons8.com/?size=100&id=92&format=png" alt="" height="30px"></a> 
             </div>
         </div>
+
+        <div class="container">
+        <!-- Experience Section -->
+        <div class="experience-section">
+            <!-- First Job Section -->
+            <div class="job-section">
+                <div class="job-header">
+                    <h2 class="job-title">Job Title</h2>
+                    <p class="company-name">Company Name</p>
+                    <p class="date-range">Apr 2018 - Dec 2022</p>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Second Job Section -->
+            <div class="job-section right">
+                <div class="job-header">
+                    <h2 class="job-title">Job Title</h2>
+                    <p class="company-name">Company Name</p>
+                    <p class="date-range">Apr 2018 - Dec 2022</p>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="projects-section">
+            <!-- Featured Projects Section -->
+            <div class="featured-projects">
+                <h2 class="section-header">Featured Project</h2>
+                
+                <!-- First Featured Project -->
+                <div class="featured-project">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project Name</h3>
+                        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis. Vivamus facilisis ligula id fringilla gravida.</p>
+                        <div class="project-divider"></div>
+                        <div class="project-tech">HTML CSS JS Figma React</div>
+                        <div class="project-links">
+                            <span class="project-link"></span>
+                            <span class="project-link"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second Featured Project -->
+                <div class="featured-project reverse">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project Name</h3>
+                        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis. Vivamus facilisis ligula id fringilla gravida.</p>
+                        <div class="project-divider"></div>
+                        <div class="project-tech">HTML CSS JS Figma React</div>
+                        <div class="project-links">
+                            <span class="project-link"></span>
+                            <span class="project-link"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other Projects Section -->
+            <div class="other-projects">
+                <h2 class="section-header">Other Project</h2>
+                
+                <div class="projects-grid">
+                    <!-- Left Column -->
+                    <div class="projects-column">
+                        <div class="small-project">
+                            <div class="small-project-image"></div>
+                            <div class="small-project-content">
+                                <h4 class="small-project-title">Project Name</h4>
+                                <p class="small-project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis.</p>
+                                <div class="small-project-divider"></div>
+                                <div class="small-project-tech">HTML CSS JS</div>
+                                <div class="small-project-links">
+                                    <span class="small-project-link"></span>
+                                    <span class="small-project-link"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="small-project">
+                            <div class="small-project-image"></div>
+                            <div class="small-project-content">
+                                <h4 class="small-project-title">Project Name</h4>
+                                <p class="small-project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis.</p>
+                                <div class="small-project-divider"></div>
+                                <div class="small-project-tech">HTML CSS JS</div>
+                                <div class="small-project-links">
+                                    <span class="small-project-link"></span>
+                                    <span class="small-project-link"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column -->
+                    <div class="projects-column">
+                        <div class="small-project">
+                            <div class="small-project-image"></div>
+                            <div class="small-project-content">
+                                <h4 class="small-project-title">Project Name</h4>
+                                <p class="small-project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis.</p>
+                                <div class="small-project-divider"></div>
+                                <div class="small-project-tech">HTML CSS JS</div>
+                                <div class="small-project-links">
+                                    <span class="small-project-link"></span>
+                                    <span class="small-project-link"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="small-project">
+                            <div class="small-project-image"></div>
+                            <div class="small-project-content">
+                                <h4 class="small-project-title">Project Name</h4>
+                                <p class="small-project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis.</p>
+                                <div class="small-project-divider"></div>
+                                <div class="small-project-tech">HTML CSS JS</div>
+                                <div class="small-project-links">
+                                    <span class="small-project-link"></span>
+                                    <span class="small-project-link"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
         <p style="text-align: center;margin-bottom: 0"><a href="mailto:slikhithreddy22@gmail.com" style="text-decoration: none; color: #807363;">Contact me</a></p>
         <p style="text-align: center; margin-top: 0;">Made by Likhith💕</p>
     </div>

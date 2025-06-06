@@ -1,154 +1,277 @@
-* {
-    background-color: rgb(243, 243, 243);
-  }
-  
-  .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 80px;
-      right: 10px;
-      padding: 20px 0;
-      background-color: #f5f5f5;
-      z-index: 100;
-  }
-  
-  .brand-div {
-      display: flex;
-      align-items: center;
-  }
-  
-  .brand {
-      font-size: 24px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-  }
-  
-  .brand::before {
-      content: '';
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      background-color: #f7b500;
-      border-radius: 50%;
-      margin-right: 10px;
-  }
-  
-  .nav {
-      display: flex;
-      list-style: none;
-  }
-  
-  .nav li {
-      margin-left: 20px;
-      font-size: 16px;
-  }
-  
-  .nav li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: normal;
-      transition: color 0.3s;
-  }
-  
-  .nav li a:hover {
-      color: #000;
-  }
-  
-  .side-links {
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      top: 100px;
-      left: 0;
-      bottom: 0;
-      padding: 10px;
-      justify-content: flex-end;
-  }
-  
-  .social-media {
-      padding-left: 5px;
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-  }
-  
-  .logos-item {
-      margin-bottom: 20px;
-  }
-  
-  .logos {
-      width: 30px;
-      transition: transform 0.2s ease-in-out;
-  }
-  
-  .logos:hover {
-      transform: scale(1.1);
-  }
-  
-  .main-content,.resume ,#resume,.projects,#projects{
-      padding-top: 50px;
-      padding-left: 100px;
-  }
-  
-  .Main {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-  }
-  
-  .hello {
-      font-size: 100px;
-      padding-top: 0;
-      margin-top: 0;
-      margin-bottom: 10px;
-  }
-  
-  .bitAboutMe {
-      font-size: 30px;
-      margin-bottom: 0;
-      margin-top: 0;
-  }
-  
-  
-  .term,.project{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .term-content{
-    display: grid;
-    grid-template-columns: 150px 1fr;
-  }
-  
-  .termName,.project-content{
-      padding-left: 100px;
-  }
-  .termNamepara{
-      font-size: 25px;
-      font-weight:lighter;
-  }
-  .term-heading-para{
-      font-size: 20px;
-      font-weight: lighter;
-  
-  }
-  .about-term{
-    padding-right: 50px;
-  }
-  .hidden {
-    display: none;
+ * {
+  background-color: rgb(243, 243, 243);
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 80px;
+  right: 10px;
+  padding: 20px 0;
+  background-color: #f5f5f5;
+  z-index: 100;
+}
+
+.brand-div {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.brand::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #f7b500;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+}
+
+.nav li {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: normal;
+  transition: color 0.3s;
+}
+
+.nav li a:hover {
+  color: #000;
+}
+
+.side-links {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+.social-media {
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.logos-item {
+  margin-bottom: 20px;
+}
+
+.logos {
+  width: 30px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.logos:hover {
+  transform: scale(1.1);
+}
+
+.main-content,
+.resume,
+#resume,
+.projects,
+#projects {
+  padding-top: 50px;
+  padding-left: 100px;
+}
+
+.Main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hello {
+    margin-top: 0px;
+  font-size: 100px;
+  margin-bottom: 10px;
+}
+
+.bitAboutMe {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.term,
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.term-content {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+
+.termName,
+.project-content {
+  padding-left: 100px;
+}
+
+.termNamepara {
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+.term-heading-para {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.about-term {
+  padding-right: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
 .toggle-heading {
-    cursor: pointer;
-    color: #807363; 
-    transition: color 0.3s ease;
+  cursor: pointer;
+  color: #807363;
+  transition: color 0.3s ease;
 }
-.project-name-para{
-    display: inline-block;
+
+.project-name-para {
+  display: inline-block;
 }
-.projectName{
-    margin-left: 100px;
-    display: flex;
+
+.projectName {
+  margin-left: 100px;
+  display: flex;
 }
+
+/* ✅ Responsive Media Queries */
+@media (max-width: 1024px) {
+  .Main,
+  .term,
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+  .term-content {
+    grid-template-columns: 1fr;
+  }
+
+  .termName,
+  .project-content,
+  .projectName {
+    padding-left: 20px;
+    margin-left: 0;
+  }
+
+  .main-content,
+  .resume,
+  #resume,
+  .projects,
+  #projects {
+    padding-left: 20px;
+  }
+
+  .hello {
+    font-size: 60px;
+  }
+
+  .bitAboutMe {
+    font-size: 24px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .side-links {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hello {
+    font-size: 40px;
+  }
+
+  .bitAboutMe {
+    font-size: 20px;
+  }
+
+  .termNamepara {
+    font-size: 18px;
+  }
+
+  .term-heading-para {
+    font-size: 16px;
+  }
+
+  .logos {
+    width: 25px;
+  }
+
+  .projectName {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+
+  .nav li {
+    margin-left: 0;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+} 
+
+@media(max-width : 500px) {
+    .mypic img{
+        width: 300px;
+    }
+    
+}
+
+@media(max-width : 320px) {
+    .mypic img{
+        width: 200px;
+    }
+    
+}
+
+
+
+
+
