@@ -14,111 +14,9 @@
             background-color: #f5f5f5;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
         /* Experience Section */
-        .experience-section {
-            background-color: white;
-            padding: 40px;
-            margin-bottom: 60px;
-        }
         
-        .job-section {
-            display: flex;
-            margin-bottom: 60px;
-            position: relative;
-        }
         
-        .job-header {
-            width: 30%;
-            flex-shrink: 0;
-            padding-right: 40px;
-            position: relative;
-        }
-        
-        .job-header::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            width: 1px;
-            background-color: #333;
-        }
-        
-        .job-title {
-            font-size: 24px;
-            font-weight: normal;
-            margin: 0 0 8px 0;
-            color: #333;
-        }
-        
-        .company-name {
-            font-size: 18px;
-            font-weight: normal;
-            margin: 0 0 20px 0;
-            color: #666;
-        }
-        
-        .date-range {
-            font-size: 16px;
-            color: #333;
-            margin: 0;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-        }
-        
-        .job-details {
-            flex: 1;
-            padding-left: 40px;
-        }
-        
-        .job-details ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        
-        .job-details li {
-            margin-bottom: 20px;
-            position: relative;
-            padding-left: 20px;
-            font-size: 16px;
-            line-height: 1.5;
-            color: #333;
-        }
-        
-        .job-details li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #333;
-            font-weight: bold;
-        }
-        
-        /* Second job section - right aligned */
-        .job-section.right {
-            flex-direction: row-reverse;
-        }
-        
-        .job-section.right .job-header {
-            padding-left: 40px;
-            padding-right: 0;
-            text-align: right;
-        }
-        
-        .job-section.right .job-header::after {
-            left: 0;
-            right: auto;
-        }
-        
-        .job-section.right .job-details {
-            padding-right: 40px;
-            padding-left: 0;
-        }
         
         /* Projects Section */
         .projects-section {
@@ -136,25 +34,6 @@
             position: relative;
             color: #333;
         }
-        
-        /* .section-header::before,
-        .section-header::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 200px;
-            height: 1px;
-            background-color: #333;
-        }
-        
-        .section-header::before {
-            left: -220px;
-        }
-        
-        .section-header::after {
-            right: -220px;
-        }
-         */
         /* Featured Projects */
         .featured-projects {
             margin-bottom: 80px;
@@ -414,7 +293,12 @@
 </head>
 
 <body style="padding-top: 100px; font-family: 'Work Sans', sans-serif;">
-    <div class="header">
+
+    
+
+
+
+    <div class="header" style="padding-left: 0px;">
         <div class="brand-div">
             <h2 class="brand">My Port</h2>
         </div>
@@ -422,6 +306,7 @@
             <ul class="nav">
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li>cv</li>
             </ul>
         </div>     
     </div>
@@ -433,7 +318,7 @@
             <li class="logos-item"><a href="https://x.com/LikhithRed13161" target="_blank"><img class="logos" src="https://www.svgrepo.com/show/510291/twitter.svg" alt="twitter logo"></a></li>
         </ul>
     </div>
-    
+    <div class="main-container">
     <div class="main-content">
         <div class="Main">
             <div class="mypic"><img src="./profile-pic.jpg" width="450px" style="border-radius: 250px;" alt="My Pic"></div>
@@ -470,10 +355,10 @@
                         </p>
                     </div>
                     <div id="work-details" class="about-term hidden">
-                        <pre>
+                        <p>
 Currently pursuing my BTECH Degree in AMRITA
 UNIVERSITY
-                        </pre>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -498,12 +383,12 @@ UNIVERSITY
                             </p>
                         </div>
                         <div id="amrita-details" class="about-term hidden">
-                            <pre>
+                            <p>
 I am working towards my aspirations in the
 field of cybersecurity.Alongside my studies, I
 have developed a decent knack for computers
 and games, which complements my technical education.
-                            </pre>
+                            </p>
                         </div>
                     </div>
                 </div>              
@@ -518,12 +403,12 @@ and games, which complements my technical education.
                             </p>
                         </div>
                         <div id="narayana-details" class="about-term hidden">
-                            <pre>
+                            <p>
 Narayana Schools provided me with an
 invaluable experience, culminating in my
 achieving a score of 97.49% in the JEE Mains
 examination.
-                            </pre>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -583,9 +468,9 @@ teams in PUBG.</pre>
 
     <p id="projects"style="font-size: large;">projects</p>
 
-    <div class="projects">
+    
         
-        
+        <!-- <>
         <div class="project">
             <div>
                 <div class="project-content">
@@ -642,28 +527,27 @@ expense management.
                 <p class="project-name-para">Go to website</p> <a href="https://expenses-tracker-nine-rust.vercel.app/" target="_blank"><img src="https://img.icons8.com/?size=100&id=92&format=png" alt="" height="30px"></a> 
             </div>
         </div>
+        <> -->
 
-        <div class="container">
+        <!-- <div class="container"> -->
         <!-- Experience Section -->
         <div class="experience-section">
             <!-- First Job Section -->
             <div class="job-section">
                 <div class="job-header">
-                    <h2 class="job-title">Job Title</h2>
-                    <p class="company-name">Company Name</p>
-                    <p class="date-range">Apr 2018 - Dec 2022</p>
+                    <h2 class="job-title">Studeng Volunteer</h2>
+                    <p class="company-name">Anokha Event</p>
+                    <p class="date-range">Aug 2024</p>
                 </div>
                 <div class="job-details">
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula</li>
-                    </ul>
+                    I had the incredible opportunity to participate as a student volunteer at Anokha, the renowned tech fest at Amrita College.
+                    This experience not only strengthened my teamwork and organizational skills but also gave me exposure to cutting-edge technologies.
+                    Attending workshops on Artificial Intelligence and Cybersecurity was a highlight, where I gained valuable insights into the latest industry trends and innovations.
                 </div>
             </div>
 
             <!-- Second Job Section -->
-            <div class="job-section right">
+            <!-- <div class="job-section right">
                 <div class="job-header">
                     <h2 class="job-title">Job Title</h2>
                     <p class="company-name">Company Name</p>
@@ -676,7 +560,7 @@ expense management.
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula</li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <!-- Projects Section -->
@@ -785,13 +669,14 @@ expense management.
                 </div>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 
 
 
-
+<div class="footer">
         <p style="text-align: center;margin-bottom: 0"><a href="mailto:slikhithreddy22@gmail.com" style="text-decoration: none; color: #807363;">Contact me</a></p>
         <p style="text-align: center; margin-top: 0;">Made by Likhith💕</p>
+    </div>
     </div>
     <script>
         function toggleContent(id) {

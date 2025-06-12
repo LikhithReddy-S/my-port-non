@@ -1,7 +1,9 @@
  * {
   background-color: rgb(243, 243, 243);
 }
-
+.main-container{
+  padding-left: 40px;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -13,6 +15,9 @@
   padding: 20px 0;
   background-color: #f5f5f5;
   z-index: 100;
+}
+.header li{
+  padding-right: 20px;
 }
 
 .brand-div {
@@ -93,6 +98,7 @@
 .resume,
 #resume,
 .projects,
+.experience-section,
 #projects {
   padding-top: 50px;
   padding-left: 100px;
@@ -164,7 +170,7 @@
 }
 
 /* ✅ Responsive Media Queries */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .Main,
   .term,
   .project {
@@ -219,9 +225,9 @@
     margin-top: 20px;
     padding: 0;
   }
-}
+} */
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .hello {
     font-size: 40px;
   }
@@ -255,23 +261,115 @@
   .brand {
     font-size: 20px;
   }
-} 
+}  */
 
-@media(max-width : 500px) {
+/* @media(max-width : 500px) {
     .mypic img{
         width: 300px;
     }
     
-}
+} */
 
-@media(max-width : 320px) {
+/* @media(max-width : 320px) {
     .mypic img{
         width: 200px;
     }
     
+} */
+
+/* Experience Section */
+
+.job-section {
+  display: flex;
+  margin-bottom: 60px;
+  position: relative;
+}
+        
+.job-header {
+  width: 30%;
+  flex-shrink: 0;
+  padding-right: 40px;
+  position: relative;
 }
 
+.job-header::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #333;
+}
 
+.job-title {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 0 8px 0;
+  color: #333;
+}
 
+.company-name {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0 0 20px 0;
+  color: #666;
+}
 
+.date-range {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+.job-details {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.job-details ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.job-details li {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.job-details li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Second job section - right aligned */
+.job-section.right {
+  flex-direction: row-reverse;
+}
+
+.job-section.right .job-header {
+  padding-left: 40px;
+  padding-right: 0;
+  text-align: right;
+}
+
+.job-section.right .job-header::after {
+  left: 0;
+  right: auto;
+}
+
+.job-section.right .job-details {
+  padding-right: 40px;
+  padding-left: 0;
+}
 
