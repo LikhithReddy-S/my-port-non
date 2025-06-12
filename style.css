@@ -1,0 +1,104 @@
+html {
+  scroll-padding-top: 60px;
+}
+.navbar{
+    background-color: aliceblue;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 70px;
+  background-color: #ffffff;
+  color: #000000;
+  /* padding: 1rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.sidebar a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.social-media {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logos-item {
+  margin-bottom: 20px;
+}
+
+.logos {
+  width: 30px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.logos:hover {
+  transform: scale(1.1);
+}
+
+.content {
+  margin-left: 60px;
+  padding: 2rem;
+}
+
+.main-content,
+.resume,
+#resume,
+.projects,
+.experience-section,
+#projects {
+  padding-top: 60px;
+  padding-left: 60px;
+}
+
+.mytext{
+  align-items: center;
+  justify-content: center;
+}
+
+.hello {
+    margin-top: 0px;
+  font-size: 100px;
+  margin-bottom: 10px;
+}
+
+.bitAboutMe {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+.mypic img {
+  width: 450px;
+  border-radius: 250px;
+}
+
+@media (max-width: 767.98px) {
+  .mypic img {
+    width: 250px;
+  }
+  .hello{
+    margin-top: 0px;
+  font-size: 50px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}
+
