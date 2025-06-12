@@ -70,6 +70,8 @@ html {
 .resume,
 #resume,
 #skills,
+.experiences,
+#experiences,
 .projects,
 .skills,
 .experience-section,
@@ -120,6 +122,61 @@ html {
 }
 
 
+
+.job-header {
+    width: 30%;
+    flex-shrink: 0;
+    padding-right: 40px;
+    position: relative;
+}
+.job-header::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #333;
+}
+.job-title {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 8px 0;
+}
+.company-name {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+    color: #666;
+}
+.date-range {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+.job-details{
+  padding-left: 51px !important
+}
+
+.job-section.right .job-header {
+    padding-left: 40px;
+    padding-right: 12px;
+    text-align: right;
+}
+
+.job-section.right .job-header::after {
+    left: 0;
+    right: auto;
+}
+
+.job-section.right .job-details {
+    padding-right: 40px;
+    padding-left: 0 !important;
+}
+
+
 @media (min-width: 769px) {
   .br-desktop {
     display: inline;
@@ -133,6 +190,8 @@ html {
   #resume,
   #skills,
   .skills,
+  .experiences,
+  #experiences,
   #projects{
     padding-left: 0;
   }
@@ -148,6 +207,41 @@ html {
   .content {
     margin-left: 0;
     padding: 1rem;
+  }
+
+  .job-header {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+      margin-bottom: 20px;
+      text-align: left;
+  }
+
+  .job-header::after {
+      display: none;
+  }
+  .company-name{
+    margin-bottom: 0px;
+  }
+  .date-range {
+      border-top: none;
+      padding-top: 0;
+  }
+  .job-details{
+    padding-left: 12px !important;
+    padding-right: 12px !important
+  }
+  .job-section.right .job-header {
+      padding-left: 0;
+      padding-right: 0;
+      text-align: left;
+  }
+  .job-section.right .job-header::after {
+      display: none;
+  }
+  .job-section.right .job-details {
+      padding-left: 12px !important;
+      padding-right: 12px !important;
   }
 }
 
@@ -196,7 +290,6 @@ html {
 .fill-react     { width: 85%; animation-delay: 0.7s; }
 .fill-flask     { width: 70%; animation-delay: 0.7s; }
 .fill-node     { width: 70%; animation-delay: 0.7s; }
-
 
 
 
