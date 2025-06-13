@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Port</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./popup/popup.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
@@ -308,6 +309,24 @@
   </head>
 
   <body style="font-family: 'Work Sans', sans-serif">
+
+    <div class="popup-overlay" id="popupOverlay">
+  <div class="popup-box">
+    <button class="close-btn" onclick="closePopup()">x</button>
+    <h2>Welcome!</h2>
+    <p>You're currently viewing my <strong>main portfolio</strong>.<br>
+      (This is under construction🚧) <br>
+      Want to check out the other one?
+    </p>
+    <div class="popup-links">
+      <a href="https://likhithreddy-s.github.io/my-port-non/">Main Portfolio</a>
+      <a href="https://likhith-reddy.vercel.app/">Alternate Portfolio</a>
+    </div>
+  </div>
+</div>
+
+
+
     <nav class="navbar navbar-expand-lg my-navbar sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">My Port</a>
@@ -821,6 +840,11 @@ teams in PUBG.</pre
         }
       }
     </script>
+
+    <!-- popup js -->
+    <script src="./popup/popup.js"></script>
+    <!-- popup js completed -->
+     
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
