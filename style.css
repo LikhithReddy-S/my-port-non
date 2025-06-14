@@ -189,8 +189,11 @@ html {
     background-color: #aaa;
     flex-shrink: 0;
 }
+.project-title-sm{
+  font-size: 20px;
+}
 
-.featured-project{
+.featured-project,.projects-grid{
   margin: 50px !important;
 }
 .project-tech {
@@ -198,6 +201,9 @@ html {
 }
 .prog-lang-img{
   width:  50px;
+}
+.prog-lang-img-sm{
+  height: 20px;
 }
 .feather{
   max-width: 20px;
@@ -280,11 +286,14 @@ html {
       width: 100%;
       height: 200px;
   }
+  .small-project{
+    margin-bottom: 10px;
+  }
   .small-project-image {
       width: 100%;
       height: 120px;
   }
-  .featured-project{
+  .featured-project,.projects-grid{
   margin: 0px !important;
 }
   .project-links{
