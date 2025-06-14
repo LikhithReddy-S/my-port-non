@@ -179,8 +179,6 @@ html {
 .project-image {
     width: 350px;
     height: 200px;
-    background-color: #aaa;
-    flex-shrink: 0;
 }
 
 .small-project-image {
