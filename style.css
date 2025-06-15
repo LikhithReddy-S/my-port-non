@@ -184,8 +184,6 @@ html {
 .small-project-image {
     width: 120px;
     height: 80px;
-    background-color: #aaa;
-    flex-shrink: 0;
 }
 .project-title-sm{
   font-size: 20px;
